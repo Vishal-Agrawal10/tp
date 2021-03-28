@@ -7,4 +7,4 @@ name = input()
 if name == programmer_name:
   print("That is my name!")
 else:
-  print("{} is different than Eliot".format(name))
+  print("{} is different than {}".format(name, programmer_name))
