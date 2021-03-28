@@ -1,15 +1,10 @@
 import sys
 
-print("Enter Name : ", end ='', file = sys.stderr)
+programmer_name = "Eliot"
+print("Enter your Name : ", end ='', file = sys.stderr)
 name = input()
-print("Enter Sound : ",end ='', file = sys.stderr)
-sound = input()
 
-if name == "cardinal":
-  print("red")
-elif sound == "loud" and name == "robin":
-  print('blue')
-elif sound == 'soft':
-  print('cyan')
+if name == programmer_name:
+  print("That is my name!")
 else:
-  print('black')
+  print("{} is different than Eliot".format(name))
