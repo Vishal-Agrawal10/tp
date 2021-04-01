@@ -1,10 +1,9 @@
 import sys
-
-programmer_name = "Eliot"
-print("Enter your Name : ", end ='', file = sys.stderr)
-name = input()
-
-if name == programmer_name:
-  print("That is my name!")
+x = 2
+if x > 3:
+  print("Big")
+elif x > 1:
+  print("Medium")
 else:
-  print("{} is different than {}".format(name, programmer_name))
+  print("Small")
+  
