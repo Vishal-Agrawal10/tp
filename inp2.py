@@ -1975,20 +1975,38 @@ def place_radio(text,group='',name='',fill='light green',outline='dark blue',fon
 
 def save_gui4sher(): return None
 
-change_title("abc")
+change_title("problem1")
 ''' All the objects in the graphics are below '''
-rec = Rectangle(Point(93.0,43.0),Point(375.0,282.0))
-rec.set_name('rec')
-rec.set_fill('red')
-rec.set_outline('purple')
-rec.set_width('5')
-rec.draw()
-poly = Polygon(Point(225.0,42.0),Point(375.0,158.0),Point(225.0,283.0))
-poly.set_name('poly')
-poly.set_fill('orange')
-poly.set_outline('blue')
-poly.set_width('5')
-poly.draw()
+oval = Oval(Point(74.0,64.0),Point(388.0,168.0))
+oval.set_name('oval')
+oval.set_fill('white')
+oval.set_outline('red')
+oval.set_width('3')
+oval.draw()
+white = Button(Point(443.0,56.0),"Fill White","white")
+white.set_fill('cyan')
+white.set_outline('black')
+white.set_width('10')
+white.set_text('Fill White')
+white.set_font(('times', 14))
+white.set_justify('center')
+white.draw()
+orange = Button(Point(444.0,144.0),"Fill Orange","orange")
+orange.set_fill('cyan')
+orange.set_outline('black')
+orange.set_width('11')
+orange.set_text('Fill Orange')
+orange.set_font(('times', 14))
+orange.set_justify('center')
+orange.draw()
+
+def white_click():
+	oval.set_fill('white')
+
+
+def orange_click():
+	oval.set_fill('orange')
+
 
 
 root.mainloop()
