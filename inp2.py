@@ -1975,37 +1975,42 @@ def place_radio(text,group='',name='',fill='light green',outline='dark blue',fon
 
 def save_gui4sher(): return None
 
-change_title("problem1")
+change_title("problem2")
 ''' All the objects in the graphics are below '''
-oval = Oval(Point(74.0,64.0),Point(388.0,168.0))
-oval.set_name('oval')
-oval.set_fill('white')
-oval.set_outline('red')
-oval.set_width('3')
-oval.draw()
-white = Button(Point(443.0,56.0),"Fill White","white")
-white.set_fill('cyan')
-white.set_outline('black')
-white.set_width('10')
-white.set_text('Fill White')
-white.set_font(('times', 14))
-white.set_justify('center')
-white.draw()
-orange = Button(Point(444.0,144.0),"Fill Orange","orange")
-orange.set_fill('cyan')
-orange.set_outline('black')
-orange.set_width('11')
-orange.set_text('Fill Orange')
-orange.set_font(('times', 14))
-orange.set_justify('center')
-orange.draw()
+label = Label(Point(26.0,131.0),"N00829601","label")
+label.set_name('label')
+label.set_fill('')
+label.set_outline('black')
+label.set_width('10000')
+label.set_text('N00829601')
+label.set_font(('times', 14))
+label.draw()
+entry = Entry(Point(181.0,131.0),9,"entry")
+entry.set_fill('white')
+entry.set_outline('black')
+entry.set_width('9')
+entry.set_text('')
+entry.set_font(('times', 14))
+entry.set_justify('left')
+entry.draw()
+button = Button(Point(357.0,130.0),"Check","button")
+button.set_fill('cyan')
+button.set_outline('black')
+button.set_width('26')
+button.set_text('Check')
+button.set_font(('times', 14))
+button.set_justify('center')
+button.draw()
 
-def white_click():
-	oval.set_fill('white')
+def entry_return():
+	pass
 
 
-def orange_click():
-	oval.set_fill('orange')
+def button_click():
+	if entry.get_text() == 'N00829601':
+		button.set_text('Correct!')
+	else:
+		button.set_text('My N-number is (N00829601)')
 
 
 
